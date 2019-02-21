@@ -47,6 +47,9 @@ INSTALLED_APPS = [
     'corsheaders',   # 解决跨域问题的第三方包
     # 项目中的功能模块
     'users',
+    'goods',
+    'cart',
+    'news',
 
 
 ]
@@ -75,6 +78,8 @@ CORS_ORIGIN_WHITELIST = (
 # 指定在跨域访问中，后台是否支持cookie操作
 CORS_ALLOW_CREDENTIALS = True
 
+# 注册自定义的用户模型类
+AUTH_USER_MODEL = 'users.User'
 
 ROOT_URLCONF = 'cmstest.urls'
 
