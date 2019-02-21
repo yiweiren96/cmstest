@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cmstest测试模板</title>
+
+    <script type="text/javascript" src="js/axios-0.18.0.min.js"></script>
+    <script type="text/javascript">
+
+        axios.post('http://127.0.0.1:8000/test2/')
+            .then(response => {
+                alert(response.data.message)
+        })
+            .catch(error => {
+                alert(error)
+        })
+
+    </script>
+</head>
+<body>
+<h3>cmstest测试模板</h3>
+</body>
+</html>
