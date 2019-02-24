@@ -3,7 +3,6 @@ import re
 from django_redis import get_redis_connection
 from redis.client import StrictRedis
 from rest_framework import serializers
-from rest_framework.exceptions import ValidationError
 from rest_framework.serializers import ModelSerializer
 
 from users.models import User

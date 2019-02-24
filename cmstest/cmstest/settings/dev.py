@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'corsheaders',   # 解决跨域问题的第三方包
     # 项目中的功能模块
     'users',            # 用户
-    'verifications',    # 短信验证码
     'goods',            # 商品
     'cart',             # 购物车
     'news',             # 新闻
