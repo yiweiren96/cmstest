@@ -46,13 +46,16 @@ INSTALLED_APPS = [
     'rest_framework',   # 注册 django rest framwork 应用
     'corsheaders',   # 解决跨域问题的第三方包
     # 项目中的功能模块
-    'users',
-    'goods',
-    'cart',
-    'news',
+    'users',            # 用户
+    'verifications',    # 短信验证码
+    'goods',            # 商品
+    'cart',             # 购物车
+    'news',             # 新闻
 
 
 ]
+
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'api.cmstest.site']
 
 MIDDLEWARE = [
     # 解决跨域问题的第三方包
@@ -72,8 +75,9 @@ MIDDLEWARE = [
 CORS_ORIGIN_WHITELIST = (
     '127.0.0.1:8080',
     'localhost:8080',
-    'www.meiduo.site:8080',
-    'api.meiduo.site:8000'
+    'www.cmstest.site:8080',
+    'api.cmstest.site:8000',
+
 )
 # 指定在跨域访问中，后台是否支持cookie操作
 CORS_ALLOW_CREDENTIALS = True

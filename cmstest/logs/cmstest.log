@@ -71,3 +71,75 @@ Traceback (most recent call last):
 ZeroDivisionError: division by zero
 ERROR 2019-02-21 17:22:56,521 basehttp 124 "GET /test2/ HTTP/1.1" 500 93576
 INFO 2019-02-21 17:42:11,644 basehttp 124 "OPTIONS /test2/ HTTP/1.1" 200 169
+WARNING 2019-02-24 15:39:55,832 basehttp 124 "GET /users/ HTTP/1.1" 405 8608
+INFO 2019-02-24 15:39:55,937 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+INFO 2019-02-24 15:39:55,938 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2019-02-24 15:39:55,939 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2019-02-24 15:39:55,939 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2019-02-24 15:39:55,956 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2019-02-24 15:39:55,960 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+INFO 2019-02-24 15:39:55,961 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+INFO 2019-02-24 15:39:55,972 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+INFO 2019-02-24 15:39:55,992 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2019-02-24 15:39:56,000 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2019-02-24 15:39:56,093 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2019-02-24 15:39:56,174 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2019-02-24 15:39:56,516 base 152 Not Found: /favicon.ico
+WARNING 2019-02-24 15:39:56,521 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2815
+WARNING 2019-02-24 15:40:20,708 basehttp 124 "POST /users/ HTTP/1.1" 400 8747
+INFO 2019-02-24 15:40:20,760 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+INFO 2019-02-24 15:40:20,774 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2019-02-24 15:40:20,782 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2019-02-24 15:40:20,799 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2019-02-24 15:40:20,805 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+INFO 2019-02-24 15:40:20,820 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2019-02-24 15:40:20,826 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+INFO 2019-02-24 15:40:20,841 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+INFO 2019-02-24 15:40:20,847 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2019-02-24 15:40:20,856 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+WARNING 2019-02-24 15:40:20,884 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+INFO 2019-02-24 15:40:20,950 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2019-02-24 15:40:30,499 basehttp 124 "GET /users/ HTTP/1.1" 405 8608
+INFO 2019-02-24 15:40:30,539 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+INFO 2019-02-24 15:40:30,542 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2019-02-24 15:40:30,545 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2019-02-24 15:40:30,549 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2019-02-24 15:40:30,552 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+INFO 2019-02-24 15:40:30,563 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2019-02-24 15:40:30,586 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+INFO 2019-02-24 15:40:30,616 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2019-02-24 15:40:30,626 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+INFO 2019-02-24 15:40:30,650 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+WARNING 2019-02-24 15:40:30,768 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+INFO 2019-02-24 15:40:30,872 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2019-02-24 15:41:51,532 basehttp 124 "POST /users/ HTTP/1.1" 400 8747
+INFO 2019-02-24 15:41:59,857 basehttp 124 "POST /users/ HTTP/1.1" 201 8633
+ERROR 2019-02-24 15:49:45,637 exception 80 Invalid HTTP_HOST header: 'api.meiduo.site:8000'. You may need to add 'api.meiduo.site' to ALLOWED_HOSTS.
+WARNING 2019-02-24 15:49:45,809 basehttp 124 "GET / HTTP/1.1" 400 70854
+ERROR 2019-02-24 15:49:46,010 exception 80 Invalid HTTP_HOST header: 'api.meiduo.site:8000'. You may need to add 'api.meiduo.site' to ALLOWED_HOSTS.
+WARNING 2019-02-24 15:49:46,207 basehttp 124 "GET /favicon.ico HTTP/1.1" 400 70836
+WARNING 2019-02-24 15:50:29,593 base 152 Not Found: /
+WARNING 2019-02-24 15:50:29,598 basehttp 124 "GET / HTTP/1.1" 404 2764
+WARNING 2019-02-24 16:51:21,385 base 152 Not Found: /cart/count/
+WARNING 2019-02-24 16:51:21,397 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 2815
+WARNING 2019-02-24 16:51:35,565 base 152 Not Found: /cart/count/
+WARNING 2019-02-24 16:51:35,570 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 2815
+INFO 2019-02-24 16:53:33,877 basehttp 124 "GET /usernames/django/count/ HTTP/1.1" 200 31
+INFO 2019-02-24 16:53:58,543 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2019-02-24 16:53:58,547 basehttp 124 "GET /usernames/django/count/ HTTP/1.1" 200 31
+WARNING 2019-02-24 16:53:58,592 basehttp 124 "POST /users/ HTTP/1.1" 400 59
+INFO 2019-02-24 16:54:04,015 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2019-02-24 16:54:04,030 basehttp 124 "GET /usernames/django/count/ HTTP/1.1" 200 31
+WARNING 2019-02-24 16:54:04,057 basehttp 124 "POST /users/ HTTP/1.1" 400 59
+INFO 2019-02-24 16:54:07,440 basehttp 124 "GET /usernames/django1/count/ HTTP/1.1" 200 32
+INFO 2019-02-24 16:54:08,347 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2019-02-24 16:54:08,356 basehttp 124 "GET /usernames/django1/count/ HTTP/1.1" 200 32
+INFO 2019-02-24 16:54:08,454 basehttp 124 "POST /users/ HTTP/1.1" 201 52
+WARNING 2019-02-24 16:54:09,102 base 152 Not Found: /cart/count/
+WARNING 2019-02-24 16:54:09,103 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 2815
+INFO 2019-02-24 16:54:16,124 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+WARNING 2019-02-24 16:54:16,155 base 152 Not Found: /authorizations/
+WARNING 2019-02-24 16:54:16,156 basehttp 124 "POST /authorizations/ HTTP/1.1" 404 2828
+INFO 2019-02-24 16:54:25,102 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+WARNING 2019-02-24 16:54:25,139 base 152 Not Found: /authorizations/
+WARNING 2019-02-24 16:54:25,157 basehttp 124 "POST /authorizations/ HTTP/1.1" 404 2828

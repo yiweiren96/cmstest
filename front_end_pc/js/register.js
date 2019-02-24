@@ -1,6 +1,8 @@
 var vm = new Vue({
     el: '#app',
+
     data: {
+        host,
         // 双向绑定变量
         username: '',
         password: '',
@@ -39,6 +41,23 @@ var vm = new Vue({
                 this.error_name = true;
             } else {
                 this.error_name = false;
+            }
+            // 检查重名
+            if (this.error_name == false) {
+                axios.get(this.host + '/usernames/' + this.username + '/count/')
+                    .then(response => {
+                        // alert(response.data.count)
+                        if (response.data.count > 0) {
+                            this.error_name_message = '用户名已存在';
+                            this.error_name = true;
+                        } else {
+                            this.error_name = false;
+                        }
+                        console.log(this.error_name + "  " + vm.error_name)
+                    })
+                    .catch(error => {
+                        console.log(error.response.data);
+                    })
             }
         },
 
@@ -87,6 +106,13 @@ var vm = new Vue({
 
         // 获取短信
         get_sms_code: function() {
+            // 如果显示了短信验证码出错提示, 则隐藏它
+            this.error_sms_code = false;
+            // alert('获取短信验证码')
+
+            if (this.sending_flag){
+                return
+            }            
             this.check_phone();
 
             if (!this.error_phone) {

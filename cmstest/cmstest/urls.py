@@ -22,4 +22,7 @@ urlpatterns = [
     url(r'^', include('cmstest.apps.news.urls')),
     url(r'^', include('cmstest.apps.cart.urls')),
     url(r'^', include('cmstest.apps.goods.urls')),
+
+    url(r'^', include('cmstest.apps.verifications.urls')),
+
 ]
