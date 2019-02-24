@@ -71,3 +71,165 @@ Traceback (most recent call last):
 ZeroDivisionError: division by zero
 ERROR 2019-02-21 17:22:56,521 basehttp 124 "GET /test2/ HTTP/1.1" 500 93576
 INFO 2019-02-21 17:42:11,644 basehttp 124 "OPTIONS /test2/ HTTP/1.1" 200 169
+WARNING 2019-02-24 14:13:04,609 base 152 Not Found: /
+WARNING 2019-02-24 14:13:04,611 basehttp 124 "GET / HTTP/1.1" 404 2378
+WARNING 2019-02-24 14:13:04,993 base 152 Not Found: /favicon.ico
+WARNING 2019-02-24 14:13:05,013 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2429
+WARNING 2019-02-24 14:13:46,237 base 152 Not Found: /
+WARNING 2019-02-24 14:13:46,247 basehttp 124 "GET / HTTP/1.1" 404 2378
+WARNING 2019-02-24 14:13:46,468 base 152 Not Found: /favicon.ico
+WARNING 2019-02-24 14:13:46,469 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2429
+INFO 2019-02-24 14:13:53,642 basehttp 124 "GET /test/ HTTP/1.1" 200 166
+WARNING 2019-02-24 14:14:19,466 base 152 Not Found: /
+WARNING 2019-02-24 14:14:19,485 basehttp 124 "GET / HTTP/1.1" 404 2383
+INFO 2019-02-24 14:14:29,088 basehttp 124 "GET /goodstest/ HTTP/1.1" 200 5139
+INFO 2019-02-24 14:14:29,129 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2019-02-24 14:14:29,137 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+INFO 2019-02-24 14:14:29,140 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+INFO 2019-02-24 14:14:29,142 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2019-02-24 14:14:29,147 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2019-02-24 14:14:29,161 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37608
+INFO 2019-02-24 14:14:29,176 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2019-02-24 14:14:29,178 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2019-02-24 14:14:29,180 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2019-02-24 14:14:29,186 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2019-02-24 14:14:29,520 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2019-02-24 14:47:00,818 base 152 Not Found: /
+WARNING 2019-02-24 14:47:00,820 basehttp 124 "GET / HTTP/1.1" 404 2549
+ERROR 2019-02-24 14:47:09,645 exception 135 Internal Server Error: /recommendations/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/generics.py", line 201, in get
+    return self.list(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/mixins.py", line 47, in list
+    serializer = self.get_serializer(queryset, many=True)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: 'RecommendGoodsSerializer' object is not callable
+ERROR 2019-02-24 14:47:09,867 basehttp 124 "GET /recommendations/ HTTP/1.1" 500 104859
+INFO 2019-02-24 14:47:41,712 basehttp 124 "GET /recommendations/ HTTP/1.1" 200 6545
+INFO 2019-02-24 14:47:41,748 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2019-02-24 14:47:41,759 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2019-02-24 14:47:41,760 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2019-02-24 14:47:41,772 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:47:41,772 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2019-02-24 14:47:41,786 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:47:41,787 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:47:41,799 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:47:41,806 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:47:41,812 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:49:34,407 basehttp 124 "GET /recommendations/ HTTP/1.1" 200 6905
+INFO 2019-02-24 14:49:34,466 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:49:34,468 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2019-02-24 14:49:34,472 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2019-02-24 14:49:34,477 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2019-02-24 14:49:34,480 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2019-02-24 14:49:34,495 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:49:34,505 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:49:34,509 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:49:34,527 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:49:34,530 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:14,248 basehttp 124 "GET /recommendations/ HTTP/1.1" 200 6905
+INFO 2019-02-24 14:53:14,284 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:14,287 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:14,288 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:14,289 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:14,304 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:14,307 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:14,311 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:14,332 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:14,338 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:14,349 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:44,719 basehttp 124 "GET /recommendations/ HTTP/1.1" 200 6905
+INFO 2019-02-24 14:53:44,754 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:44,756 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:44,758 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:44,759 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:44,771 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:44,775 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:44,792 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:44,798 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:44,802 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:44,804 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:45,859 basehttp 124 "GET /recommendations/ HTTP/1.1" 200 6905
+INFO 2019-02-24 14:53:45,913 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:45,914 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:45,921 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:45,921 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:45,923 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:45,924 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:45,938 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:45,947 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:45,952 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:53:45,955 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:56:06,702 basehttp 124 "GET /recommendations/ HTTP/1.1" 200 7656
+INFO 2019-02-24 14:56:06,751 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2019-02-24 14:56:06,756 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2019-02-24 14:56:06,758 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2019-02-24 14:56:06,763 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:56:06,766 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2019-02-24 14:56:06,776 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:56:06,780 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:56:06,782 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:56:06,790 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:56:06,797 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2019-02-24 14:56:46,997 basehttp 124 "GET /recommendations/?page=2 HTTP/1.1" 200 6529
+INFO 2019-02-24 15:00:33,196 basehttp 124 "GET /recommendations/ HTTP/1.1" 200 7656
+INFO 2019-02-24 15:00:33,232 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2019-02-24 15:00:33,236 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2019-02-24 15:00:33,239 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2019-02-24 15:00:33,240 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2019-02-24 15:00:33,243 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+INFO 2019-02-24 15:00:33,245 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2019-02-24 15:00:33,249 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2019-02-24 15:00:33,253 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2019-02-24 15:00:33,257 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2019-02-24 15:00:33,260 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2019-02-24 15:03:04,364 basehttp 124 "GET /hotgoods/ HTTP/1.1" 200 7537
+INFO 2019-02-24 15:03:04,408 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2019-02-24 15:03:04,410 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2019-02-24 15:03:04,423 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2019-02-24 15:03:04,431 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2019-02-24 15:03:04,436 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+INFO 2019-02-24 15:03:04,438 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2019-02-24 15:03:04,440 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2019-02-24 15:03:04,445 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2019-02-24 15:03:04,484 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2019-02-24 15:03:04,486 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2019-02-24 15:03:14,265 basehttp 124 "GET /hotgoods/ HTTP/1.1" 200 7537
+INFO 2019-02-24 15:03:14,303 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2019-02-24 15:03:14,313 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+INFO 2019-02-24 15:03:14,314 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2019-02-24 15:03:14,314 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2019-02-24 15:03:14,317 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2019-02-24 15:03:14,324 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2019-02-24 15:03:14,325 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2019-02-24 15:03:14,331 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2019-02-24 15:03:14,336 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2019-02-24 15:03:14,340 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2019-02-24 15:08:27,179 basehttp 124 "GET /hotgoods/ HTTP/1.1" 200 7537
+INFO 2019-02-24 15:08:27,211 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2019-02-24 15:08:27,216 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2019-02-24 15:08:27,218 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2019-02-24 15:08:27,220 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2019-02-24 15:08:27,221 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+INFO 2019-02-24 15:08:27,226 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2019-02-24 15:08:27,248 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2019-02-24 15:08:27,250 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2019-02-24 15:08:27,252 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2019-02-24 15:08:27,255 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
