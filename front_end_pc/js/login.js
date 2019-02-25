@@ -13,7 +13,17 @@ var vm = new Vue({
     },
 
     methods: {
-        // 检查数据
+        // 获取url路径参数
+        get_query_string: function (name) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) {
+                return decodeURI(r[2]);
+            }
+            return null;
+        },
+
+        // 检查用户名数据
         check_username: function(){
             if (!this.username) {
                 this.error_username = true;
@@ -23,6 +33,8 @@ var vm = new Vue({
                 this.error_msg = '';
             }
         },
+
+        // 检查密码
         check_pwd: function(){
             if (!this.password) {
                 this.error_msg = '请填写密码';
@@ -71,7 +83,8 @@ var vm = new Vue({
                         location.href = return_url;
 
                     }) .catch(error => {
-                        this.error_msg = '用户名或密码错误';
+                            this.error_msg = '用户名或密码错误';
+
                     })
             }
         },

@@ -129,6 +129,9 @@ var vm = new Vue({
             this.check_phone();
             this.check_allow();
 
+            // localStorage.name = 'localStorage'
+            // sessionStorage.name2 = 'sessionStorage'
+
             if (this.error_name === false
                 && this.error_password === false
                 && this.error_check_password === false
@@ -149,6 +152,15 @@ var vm = new Vue({
                 // 发起post请求
                 axios.post(url, params)
                     .then(response => {
+
+                        // 清除之前保存的数据
+                        sessionStorage.clear();
+                        localStorage.clear();
+                        // 保存用户的登录状态数据
+                        localStorage.token = response.data.token;
+                        localStorage.username = response.data.username;
+                        localStorage.user_id = response.data.id;
+
                         // 注册成功进入登录界面
                         location.href = '/login.html';
                     }).catch(error => {

@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 # 开发环境下使用的配置文件
-
+import datetime
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -229,5 +229,24 @@ LOGGING = {
 # DRF相关配置
 REST_FRAMEWORK = {
     # 自定义异常处理
-    # 'EXCEPTION_HANDLER': 'cmstest.utils.exceptions.custom_exception_handler',
+    # 'EXCEPTION_HANDLER': 'cmstest.utils .exceptions.custom_exception_handler',
+
+    # 配置项目支持的认证方式
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',  # jwt认证
+        'rest_framework.authentication.SessionAuthentication',  # 管理后台使用
+        'rest_framework.authentication.BasicAuthentication',
+    ),
 }
+
+# jwt认证配置
+JWT_AUTH = {    # 导包： import datetime
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1),  	# jwt有效时间
+
+    # 修改登录成功接口返回的响应参数， 新增 user_id 和 username两个字段
+    'JWT_RESPONSE_PAYLOAD_HANDLER': 'users.utils.jwt_response_payload_handler',
+}
+
+# 使用自定义的认证类: 实现用户名或手机号登录
+AUTHENTICATION_BACKENDS = ['users.utils.UsernameMobileAuthBackend',
+]

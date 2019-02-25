@@ -11,10 +11,15 @@ from users.models import User
 class CreateUserSerializer(ModelSerializer):
     """注册用户接口使用的序列化器"""
 
+
     # 新增三个数据库表中没有的,但需要校验的参数:确认密码,短信验证码,同意用户协议
     password2 = serializers.CharField(label='确认密码',min_length=8,max_length=20,write_only=True)
     sms_code = serializers.CharField(label='短信验证码',max_length=6,write_only=True)
     allow = serializers.BooleanField(label='确认密码',default=False,write_only=True)
+
+
+    # 添加 token字段
+    token = serializers.CharField(label='登录状态token', read_only=True)
 
     def validate_mobile(self,value):
         """验证手机号"""
@@ -55,11 +60,24 @@ class CreateUserSerializer(ModelSerializer):
             password=validated_data.get('password'),
             mobile=validated_data.get('mobile'),
         )
+
+        # todo: 生成jwt字符串
+        from rest_framework_jwt.settings import api_settings
+        jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER  # 生payload部分的方法(函数)
+        jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER  # 生成jwt的方法(函数)
+
+        # user：登录的用户对象
+        payload = jwt_payload_handler(user)  # 生成payload, 得到字典
+        token = jwt_encode_handler(payload)  # 生成jwt字符串
+
+        # 给user对象新增一个token的属性
+        user.token = token
+
         return user
 
     class Meta:
         model = User  # 关联的模型类
-        fields = ('id','username','password','mobile','password2','sms_code','allow')
+        fields = ('id','username','password','mobile','password2','sms_code','allow','token')
         extra_kwargs = {
             'username': {
                 'min_length': 5,

@@ -1,4 +1,6 @@
 from django.conf.urls import url
+from rest_framework_jwt.views import obtain_jwt_token
+
 from users import views
 
 urlpatterns = [
@@ -11,4 +13,6 @@ urlpatterns = [
     url(r'^users/$', views.CreateUserView.as_view()),
     url(r'^sms_codes/(?P<mobile>1[3-9]\d{9})/$', views.SmsCodeView.as_view()),
 
+    # 登录obtain_jwt_token:登录视图(登录接口)
+    url(r'^authorizations/$',obtain_jwt_token)
 ]
