@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views import View
 from rest_framework import mixins
 from rest_framework import status
+from rest_framework.decorators import action
 from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
@@ -98,7 +99,7 @@ class SubAreaView(RetrieveCacheResponseMixin, RetrieveAPIView):
     serializer_class = SubAreaSerializer
 
 
-class AddressViewSet(mixins.CreateModelMixin, GenericViewSet):
+class AddressViewSet(GenericViewSet):
     """
     用户地址管理:6个接口
     1.地址增删改查(查多条) 4个
@@ -114,6 +115,7 @@ class AddressViewSet(mixins.CreateModelMixin, GenericViewSet):
         return self.request.user.addresses.filter(is_deleted=False)
 
     # 需求: 限制返回的地址个数
+
     def create(self, request, *args, **kwargs):
         count = request.user.addresses.count()
         if count >= 5:  # 每个用户最多不能超过5个地址
@@ -122,6 +124,7 @@ class AddressViewSet(mixins.CreateModelMixin, GenericViewSet):
         return super().create(request, *args, **kwargs)
 
     # 重写list方法
+
     def list(self, request, *args, **kwargs):
         """ 用户地址列表数据 """
         queryset = self.get_queryset()  # 当前登录用户的所有地址
@@ -132,7 +135,7 @@ class AddressViewSet(mixins.CreateModelMixin, GenericViewSet):
             'limit': 10,
             'addresses': serializer.data  # 列表
         })
-
+    @action(methods=['put'], detail=True)
     def status(self, request, pk=None):
         """
         设置默认地址

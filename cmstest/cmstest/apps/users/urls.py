@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from rest_framework.routers import DefaultRouter
+from rest_framework.routers import DefaultRouter, SimpleRouter
 from rest_framework_jwt.views import obtain_jwt_token
 
 from users import views
@@ -23,7 +23,8 @@ urlpatterns = [
 
 ]
 
-router = DefaultRouter()
+router = SimpleRouter()
 
 router.register('addresses', AddressViewSet, base_name='address')
 urlpatterns += router.urls
+print(urlpatterns)

@@ -710,3 +710,41 @@ INFO 2019-02-27 11:22:03,121 basehttp 124 "GET /addresses/ HTTP/1.1" 200 496
 INFO 2019-02-27 11:22:08,753 basehttp 124 "OPTIONS /addresses/5/status/ HTTP/1.1" 200 0
 WARNING 2019-02-27 11:22:08,776 base 152 Not Found: /addresses/5/status/
 WARNING 2019-02-27 11:22:08,789 basehttp 124 "PUT /addresses/5/status/ HTTP/1.1" 404 4099
+WARNING 2019-02-27 14:25:29,379 base 152 Not Found: /news/top/
+WARNING 2019-02-27 14:25:29,383 base 152 Not Found: /news/category/
+WARNING 2019-02-27 14:25:29,384 basehttp 124 "GET /news/top/ HTTP/1.1" 404 4069
+WARNING 2019-02-27 14:25:29,400 basehttp 124 "GET /news/category/ HTTP/1.1" 404 4084
+WARNING 2019-02-27 14:25:29,568 base 152 Not Found: /cart/count/
+WARNING 2019-02-27 14:25:29,582 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 4075
+WARNING 2019-02-27 15:05:15,732 base 152 Not Found: /cart/count/
+WARNING 2019-02-27 15:05:15,734 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 4075
+WARNING 2019-02-27 15:05:15,867 base 152 Not Found: /news/top/
+WARNING 2019-02-27 15:05:15,872 basehttp 124 "GET /news/top/ HTTP/1.1" 404 4069
+WARNING 2019-02-27 15:05:15,880 base 152 Not Found: /news/category/
+WARNING 2019-02-27 15:05:15,881 basehttp 124 "GET /news/category/ HTTP/1.1" 404 4084
+INFO 2019-02-27 15:05:18,932 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+WARNING 2019-02-27 15:05:19,154 base 152 Not Found: /cart/count/
+WARNING 2019-02-27 15:05:19,159 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 4075
+INFO 2019-02-27 15:05:19,326 basehttp 124 "GET /addresses/ HTTP/1.1" 200 496
+INFO 2019-02-27 15:05:28,204 basehttp 124 "OPTIONS /addresses/5/status/ HTTP/1.1" 200 0
+WARNING 2019-02-27 15:05:28,216 base 152 Not Found: /addresses/5/status/
+WARNING 2019-02-27 15:05:28,216 basehttp 124 "PUT /addresses/5/status/ HTTP/1.1" 404 4099
+INFO 2019-02-27 15:13:42,225 basehttp 124 "OPTIONS /addresses/5/status/ HTTP/1.1" 200 0
+WARNING 2019-02-27 15:13:42,243 base 152 Not Found: /addresses/5/status/
+WARNING 2019-02-27 15:13:42,245 basehttp 124 "PUT /addresses/5/status/ HTTP/1.1" 404 4099
+INFO 2019-02-27 15:18:42,888 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+WARNING 2019-02-27 15:18:43,203 base 152 Not Found: /cart/count/
+WARNING 2019-02-27 15:18:43,204 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 3710
+INFO 2019-02-27 15:18:43,327 basehttp 124 "GET /addresses/ HTTP/1.1" 200 496
+INFO 2019-02-27 15:18:47,766 basehttp 124 "OPTIONS /addresses/5/status/ HTTP/1.1" 200 0
+INFO 2019-02-27 15:18:47,965 basehttp 124 "PUT /addresses/5/status/ HTTP/1.1" 200 16
+INFO 2019-02-27 15:18:53,666 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+WARNING 2019-02-27 15:18:54,100 base 152 Not Found: /cart/count/
+WARNING 2019-02-27 15:18:54,103 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 3710
+INFO 2019-02-27 15:18:54,194 basehttp 124 "GET /addresses/ HTTP/1.1" 200 493
+INFO 2019-02-27 15:18:56,342 basehttp 124 "OPTIONS /addresses/4/status/ HTTP/1.1" 200 0
+INFO 2019-02-27 15:18:56,471 basehttp 124 "PUT /addresses/4/status/ HTTP/1.1" 200 16
+INFO 2019-02-27 15:18:59,997 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+WARNING 2019-02-27 15:19:00,200 base 152 Not Found: /cart/count/
+WARNING 2019-02-27 15:19:00,200 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 3710
+INFO 2019-02-27 15:19:00,319 basehttp 124 "GET /addresses/ HTTP/1.1" 200 493
