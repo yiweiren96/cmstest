@@ -250,3 +250,10 @@ JWT_AUTH = {    # 导包： import datetime
 # 使用自定义的认证类: 实现用户名或手机号登录
 AUTHENTICATION_BACKENDS = ['users.utils.UsernameMobileAuthBackend',
 ]
+
+
+# drf扩展: 缓存配置, 获取省份和区县接口使用到
+REST_FRAMEWORK_EXTENSIONS = {
+    'DEFAULT_CACHE_RESPONSE_TIMEOUT': 60 * 60,	# 缓存时间(1小时)
+    'DEFAULT_USE_CACHE': 'default',				# 缓存到哪里 (caches中配置的default)
+}
