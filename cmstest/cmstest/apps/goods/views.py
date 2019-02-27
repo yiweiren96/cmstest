@@ -18,4 +18,5 @@ class hot_goods(ListAPIView):
     serializer_class = HotGoodsSerializer
 
     def get_queryset(self):
+
         return Goods.objects.filter(is_red=1).order_by('id')
