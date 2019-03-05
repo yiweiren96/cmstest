@@ -748,3 +748,1036 @@ INFO 2019-02-27 15:18:59,997 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
 WARNING 2019-02-27 15:19:00,200 base 152 Not Found: /cart/count/
 WARNING 2019-02-27 15:19:00,200 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 3710
 INFO 2019-02-27 15:19:00,319 basehttp 124 "GET /addresses/ HTTP/1.1" 200 493
+INFO 2019-02-28 12:30:36,283 basehttp 124 "GET / HTTP/1.1" 200 5185
+INFO 2019-02-28 12:30:36,407 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2019-02-28 12:30:36,412 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2019-02-28 12:30:36,414 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+INFO 2019-02-28 12:30:36,418 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2019-02-28 12:30:36,421 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2019-02-28 12:30:36,435 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2019-02-28 12:30:36,446 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2019-02-28 12:30:36,461 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2019-02-28 12:30:36,463 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2019-02-28 12:30:36,468 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2019-02-28 12:30:36,991 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+WARNING 2019-02-28 12:30:37,478 base 152 Not Found: /favicon.ico
+WARNING 2019-02-28 12:30:37,481 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 5066
+INFO 2019-02-28 12:30:59,945 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 7116
+INFO 2019-02-28 12:37:50,501 basehttp 124 "GET /goods/category/ HTTP/1.1" 200 121001
+ERROR 2019-02-28 12:50:20,769 exception 135 Internal Server Error: /goods/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'category'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/python_files/cmstest/cmstest/cmstest/apps/goods/views.py", line 64, in list
+    cat_id = request.query_params['category']
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'category'"
+ERROR 2019-02-28 12:50:20,937 basehttp 124 "GET /goods/?cat_id=41 HTTP/1.1" 500 105562
+INFO 2019-02-28 12:53:21,082 basehttp 124 "GET /goods/?category=43&ordering=sales HTTP/1.1" 200 18344
+INFO 2019-02-28 14:05:30,465 basehttp 124 "GET /goods/88/ HTTP/1.1" 200 11547
+INFO 2019-02-28 14:12:44,870 basehttp 124 "GET /category/40/ HTTP/1.1" 200 5297
+INFO 2019-02-28 14:13:05,328 basehttp 124 "GET /category/43/ HTTP/1.1" 200 5380
+INFO 2019-03-05 15:17:25,062 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+WARNING 2019-03-05 15:17:25,235 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:17:25,236 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 15:17:25,395 basehttp 124 "GET /goods/category/ HTTP/1.1" 200 77883
+INFO 2019-03-05 15:17:35,072 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+WARNING 2019-03-05 15:17:35,285 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:17:35,286 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 15:17:35,478 basehttp 124 "GET /goods/category/ HTTP/1.1" 200 77883
+INFO 2019-03-05 15:17:41,416 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+WARNING 2019-03-05 15:17:41,580 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:17:41,582 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 15:17:42,130 basehttp 124 "GET /goods/category/ HTTP/1.1" 200 77883
+INFO 2019-03-05 15:17:45,407 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+INFO 2019-03-05 15:17:45,410 basehttp 124 "GET /goods/87/ HTTP/1.1" 200 2047
+WARNING 2019-03-05 15:17:45,488 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:17:45,489 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 15:17:55,045 basehttp 124 "GET /category/43/ HTTP/1.1" 200 74
+INFO 2019-03-05 15:17:55,131 basehttp 124 "GET /goods/?category=43&ordering=create_time HTTP/1.1" 200 8526
+WARNING 2019-03-05 15:17:55,178 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:17:55,179 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 15:17:56,795 basehttp 124 "GET /goods/?category=43&ordering=sell_price HTTP/1.1" 200 8526
+INFO 2019-03-05 15:17:57,501 basehttp 124 "GET /goods/?category=43&ordering=-sell_price HTTP/1.1" 200 8526
+INFO 2019-03-05 15:17:58,207 basehttp 124 "GET /goods/?category=43&ordering=sell_price HTTP/1.1" 200 8526
+INFO 2019-03-05 15:17:58,833 basehttp 124 "GET /goods/?category=43&ordering=create_time HTTP/1.1" 200 8526
+INFO 2019-03-05 15:17:59,383 basehttp 124 "GET /goods/?category=43&ordering=sales HTTP/1.1" 200 8526
+INFO 2019-03-05 15:17:59,939 basehttp 124 "GET /goods/?category=43&ordering=sell_price HTTP/1.1" 200 8526
+INFO 2019-03-05 15:18:00,370 basehttp 124 "GET /goods/?category=43&ordering=-sell_price HTTP/1.1" 200 8526
+INFO 2019-03-05 15:18:01,782 basehttp 124 "GET /category/40/ HTTP/1.1" 200 46
+WARNING 2019-03-05 15:18:01,897 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:18:01,898 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 15:18:01,917 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+INFO 2019-03-05 15:18:03,312 basehttp 124 "GET /goods/?category=40&ordering=sales HTTP/1.1" 200 30905
+INFO 2019-03-05 15:18:03,902 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:18:04,501 basehttp 124 "GET /goods/?category=40&ordering=-sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:18:05,970 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:18:06,816 basehttp 124 "GET /goods/?category=40&ordering=-sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:18:13,980 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:18:14,668 basehttp 124 "GET /goods/?category=40&ordering=-sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:18:15,375 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:18:16,681 basehttp 124 "GET /goods/?category=40&ordering=sales HTTP/1.1" 200 30905
+INFO 2019-03-05 15:18:17,374 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:18:21,391 basehttp 124 "GET /goods/?category=40&ordering=-sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:18:22,714 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:18:25,049 basehttp 124 "GET /goods/?category=40&ordering=-sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:18:25,717 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:18:27,639 basehttp 124 "GET /goods/?category=40&ordering=-sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:18:28,301 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:18:29,551 basehttp 124 "GET /goods/?category=40&ordering=sales HTTP/1.1" 200 30905
+INFO 2019-03-05 15:18:36,939 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+INFO 2019-03-05 15:18:37,840 basehttp 124 "GET /goods/?category=40&ordering=sales HTTP/1.1" 200 30905
+INFO 2019-03-05 15:18:38,398 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:18:39,897 basehttp 124 "GET /goods/?category=40&ordering=-sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:18:40,509 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:18:40,998 basehttp 124 "GET /goods/?category=40&ordering=-sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:23:27,010 basehttp 124 "GET /category/40/ HTTP/1.1" 200 46
+ERROR 2019-03-05 15:23:27,029 exception 135 Internal Server Error: /goods/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/python_files/cmstest/cmstest/cmstest/apps/goods/views.py", line 86, in list
+    goods = Goods.objects.filter(category_id__in=ids).order_by(order)
+NameError: name 'order' is not defined
+ERROR 2019-03-05 15:23:27,126 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 500 18065
+WARNING 2019-03-05 15:23:27,162 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:23:27,166 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+ERROR 2019-03-05 15:23:28,467 exception 135 Internal Server Error: /goods/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/python_files/cmstest/cmstest/cmstest/apps/goods/views.py", line 86, in list
+    goods = Goods.objects.filter(category_id__in=ids).order_by(order)
+NameError: name 'order' is not defined
+ERROR 2019-03-05 15:23:28,493 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 500 18029
+ERROR 2019-03-05 15:23:29,317 exception 135 Internal Server Error: /goods/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/python_files/cmstest/cmstest/cmstest/apps/goods/views.py", line 86, in list
+    goods = Goods.objects.filter(category_id__in=ids).order_by(order)
+NameError: name 'order' is not defined
+ERROR 2019-03-05 15:23:29,373 basehttp 124 "GET /goods/?category=40&ordering=-sell_price HTTP/1.1" 500 18032
+WARNING 2019-03-05 15:23:56,581 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:23:56,583 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 15:23:56,815 basehttp 124 "GET /category/40/ HTTP/1.1" 200 46
+INFO 2019-03-05 15:23:56,952 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+INFO 2019-03-05 15:23:58,484 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:23:59,658 basehttp 124 "GET /goods/?category=40&ordering=-sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:24:00,342 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:24:01,017 basehttp 124 "GET /goods/?category=40&ordering=sales HTTP/1.1" 200 30905
+INFO 2019-03-05 15:24:01,544 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+INFO 2019-03-05 15:24:02,029 basehttp 124 "GET /goods/?category=40&ordering=sales HTTP/1.1" 200 30905
+INFO 2019-03-05 15:24:02,273 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:24:02,686 basehttp 124 "GET /goods/?category=40&ordering=-sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:24:03,051 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:24:03,718 basehttp 124 "GET /goods/?category=40&ordering=sales HTTP/1.1" 200 30905
+INFO 2019-03-05 15:24:04,182 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+INFO 2019-03-05 15:24:04,412 basehttp 124 "GET /goods/?category=40&ordering=sales HTTP/1.1" 200 30905
+INFO 2019-03-05 15:24:04,753 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:24:04,929 basehttp 124 "GET /goods/?category=40&ordering=-sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:24:05,320 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:24:05,793 basehttp 124 "GET /goods/?category=40&ordering=sales HTTP/1.1" 200 30905
+INFO 2019-03-05 15:24:06,087 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+INFO 2019-03-05 15:26:02,615 basehttp 124 "GET /category/40/ HTTP/1.1" 200 46
+WARNING 2019-03-05 15:26:02,777 base 152 Not Found: /cart/count/
+INFO 2019-03-05 15:26:02,783 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+WARNING 2019-03-05 15:26:02,789 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 15:26:04,101 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:26:04,620 basehttp 124 "GET /goods/?category=40&ordering=-sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:26:04,960 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:26:05,283 basehttp 124 "GET /goods/?category=40&ordering=sales HTTP/1.1" 200 30905
+INFO 2019-03-05 15:26:05,566 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+INFO 2019-03-05 15:27:17,940 basehttp 124 "GET /category/40/ HTTP/1.1" 200 46
+INFO 2019-03-05 15:27:18,058 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+WARNING 2019-03-05 15:27:18,116 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:27:18,118 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 15:27:20,137 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:27:20,565 basehttp 124 "GET /goods/?category=40&ordering=-sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 15:27:21,124 basehttp 124 "GET /goods/?category=40&ordering=sales HTTP/1.1" 200 30905
+INFO 2019-03-05 15:27:21,657 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+ERROR 2019-03-05 15:40:15,135 exception 135 Internal Server Error: /goods/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/mixins.py", line 40, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/python/Desktop/python_files/cmstest/cmstest/cmstest/apps/goods/views.py", line 107, in get_queryset
+    cat_id = self.kwargs['category']
+KeyError: 'category'
+INFO 2019-03-05 15:40:15,191 basehttp 124 "GET /category/40/ HTTP/1.1" 200 46
+ERROR 2019-03-05 15:40:15,261 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 500 18178
+WARNING 2019-03-05 15:40:15,320 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:40:15,321 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+ERROR 2019-03-05 15:40:16,693 exception 135 Internal Server Error: /goods/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/mixins.py", line 40, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/python/Desktop/python_files/cmstest/cmstest/cmstest/apps/goods/views.py", line 107, in get_queryset
+    cat_id = self.kwargs['category']
+KeyError: 'category'
+INFO 2019-03-05 15:40:16,760 basehttp 124 "GET /category/40/ HTTP/1.1" 200 46
+ERROR 2019-03-05 15:40:16,811 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 500 18178
+WARNING 2019-03-05 15:40:16,916 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:40:16,918 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+WARNING 2019-03-05 15:40:18,459 base 152 Not Found: /news/top/
+WARNING 2019-03-05 15:40:18,470 base 152 Not Found: /news/category/
+WARNING 2019-03-05 15:40:18,472 basehttp 124 "GET /news/top/ HTTP/1.1" 404 5060
+WARNING 2019-03-05 15:40:18,474 basehttp 124 "GET /news/category/ HTTP/1.1" 404 5075
+WARNING 2019-03-05 15:40:18,620 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:40:18,621 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 15:40:19,535 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+WARNING 2019-03-05 15:40:19,745 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:40:19,748 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 15:40:20,015 basehttp 124 "GET /goods/category/ HTTP/1.1" 200 77883
+ERROR 2019-03-05 15:40:22,884 exception 135 Internal Server Error: /goods/87/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/generics.py", line 85, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/python/Desktop/python_files/cmstest/cmstest/cmstest/apps/goods/views.py", line 107, in get_queryset
+    cat_id = self.kwargs['category']
+KeyError: 'category'
+ERROR 2019-03-05 15:40:22,957 basehttp 124 "GET /goods/87/ HTTP/1.1" 500 18231
+INFO 2019-03-05 15:40:22,977 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+WARNING 2019-03-05 15:40:22,998 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:40:22,999 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 15:40:51,005 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+WARNING 2019-03-05 15:40:51,079 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:40:51,098 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 15:40:51,423 basehttp 124 "GET /goods/category/ HTTP/1.1" 200 77883
+ERROR 2019-03-05 15:40:53,171 exception 135 Internal Server Error: /goods/87/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/generics.py", line 85, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/python/Desktop/python_files/cmstest/cmstest/cmstest/apps/goods/views.py", line 106, in get_queryset
+    cat_id = self.kwargs['category']
+KeyError: 'category'
+INFO 2019-03-05 15:40:53,264 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+ERROR 2019-03-05 15:40:53,267 basehttp 124 "GET /goods/87/ HTTP/1.1" 500 18231
+WARNING 2019-03-05 15:40:53,388 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:40:53,388 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+ERROR 2019-03-05 15:41:23,298 exception 135 Internal Server Error: /goods/87/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/generics.py", line 85, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/python/Desktop/python_files/cmstest/cmstest/cmstest/apps/goods/views.py", line 106, in get_queryset
+    cat_id = self.kwargs['category']
+KeyError: 'category'
+INFO 2019-03-05 15:41:23,406 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+ERROR 2019-03-05 15:41:23,447 basehttp 124 "GET /goods/87/ HTTP/1.1" 500 18264
+WARNING 2019-03-05 15:41:23,514 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:41:23,515 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 15:41:25,186 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+WARNING 2019-03-05 15:41:25,625 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:41:25,636 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 15:41:25,715 basehttp 124 "GET /goods/category/ HTTP/1.1" 200 77883
+INFO 2019-03-05 15:42:13,431 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+WARNING 2019-03-05 15:42:13,642 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:42:13,645 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 15:42:13,788 basehttp 124 "GET /goods/category/ HTTP/1.1" 200 77883
+ERROR 2019-03-05 15:42:16,390 exception 135 Internal Server Error: /goods/87/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/generics.py", line 85, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/python/Desktop/python_files/cmstest/cmstest/cmstest/apps/goods/views.py", line 106, in get_queryset
+    cat_id = self.kwargs['category']
+KeyError: 'category'
+ERROR 2019-03-05 15:42:16,499 basehttp 124 "GET /goods/87/ HTTP/1.1" 500 18231
+INFO 2019-03-05 15:42:16,521 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+WARNING 2019-03-05 15:42:16,621 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:42:16,622 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+ERROR 2019-03-05 15:47:18,509 exception 135 Internal Server Error: /goods/87/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'category'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/generics.py", line 85, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/python/Desktop/python_files/cmstest/cmstest/cmstest/apps/goods/views.py", line 106, in get_queryset
+    cat_id = self.request.query_params['category']
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'category'"
+INFO 2019-03-05 15:47:18,715 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+ERROR 2019-03-05 15:47:18,747 basehttp 124 "GET /goods/87/ HTTP/1.1" 500 18790
+WARNING 2019-03-05 15:47:18,767 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:47:18,768 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 15:47:21,684 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+WARNING 2019-03-05 15:47:22,031 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:47:22,032 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 15:47:22,213 basehttp 124 "GET /goods/category/ HTTP/1.1" 200 77883
+INFO 2019-03-05 15:56:39,073 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+WARNING 2019-03-05 15:56:39,246 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:56:39,286 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 15:56:39,635 basehttp 124 "GET /goods/category/ HTTP/1.1" 200 77883
+ERROR 2019-03-05 15:56:42,822 exception 135 Internal Server Error: /goods/87/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/request.py", line 412, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'kwargs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/generics.py", line 85, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/python/Desktop/python_files/cmstest/cmstest/cmstest/apps/goods/views.py", line 106, in get_queryset
+    cat_id = self.request.kwargs['category']
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/request.py", line 414, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'kwargs'
+INFO 2019-03-05 15:56:42,942 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+ERROR 2019-03-05 15:56:42,957 basehttp 124 "GET /goods/87/ HTTP/1.1" 500 18801
+WARNING 2019-03-05 15:56:43,138 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:56:43,140 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 15:56:46,013 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+WARNING 2019-03-05 15:56:46,138 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:56:46,146 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 15:56:46,581 basehttp 124 "GET /goods/category/ HTTP/1.1" 200 77883
+INFO 2019-03-05 15:57:51,739 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+WARNING 2019-03-05 15:57:51,880 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:57:51,914 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 15:57:52,140 basehttp 124 "GET /goods/category/ HTTP/1.1" 200 77883
+ERROR 2019-03-05 15:57:53,784 exception 135 Internal Server Error: /goods/87/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/request.py", line 412, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'kwargs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/generics.py", line 85, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/python/Desktop/python_files/cmstest/cmstest/cmstest/apps/goods/views.py", line 106, in get_queryset
+    cat_id = self.request.kwargs['category']
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/request.py", line 414, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'kwargs'
+ERROR 2019-03-05 15:57:53,828 basehttp 124 "GET /goods/87/ HTTP/1.1" 500 18801
+INFO 2019-03-05 15:57:53,833 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+WARNING 2019-03-05 15:57:54,121 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:57:54,123 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+ERROR 2019-03-05 15:58:22,781 exception 135 Internal Server Error: /goods/87/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/request.py", line 412, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'category'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/generics.py", line 85, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/python/Desktop/python_files/cmstest/cmstest/cmstest/apps/goods/views.py", line 106, in get_queryset
+    cat_id = self.request.category
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/request.py", line 414, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'category'
+INFO 2019-03-05 15:58:22,895 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+ERROR 2019-03-05 15:58:22,907 basehttp 124 "GET /goods/87/ HTTP/1.1" 500 18830
+WARNING 2019-03-05 15:58:23,032 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:58:23,033 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 15:58:25,122 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+WARNING 2019-03-05 15:58:25,425 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 15:58:25,426 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 15:58:25,652 basehttp 124 "GET /goods/category/ HTTP/1.1" 200 77883
+ERROR 2019-03-05 15:58:26,889 exception 135 Internal Server Error: /goods/87/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/request.py", line 412, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'category'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/generics.py", line 85, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/python/Desktop/python_files/cmstest/cmstest/cmstest/apps/goods/views.py", line 106, in get_queryset
+    cat_id = self.request.category
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/request.py", line 414, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'category'
+INFO 2019-03-05 15:58:27,029 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+WARNING 2019-03-05 15:58:27,077 base 152 Not Found: /cart/count/
+ERROR 2019-03-05 15:58:27,097 basehttp 124 "GET /goods/87/ HTTP/1.1" 500 18797
+WARNING 2019-03-05 15:58:27,104 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+ERROR 2019-03-05 16:01:29,430 exception 135 Internal Server Error: /goods/87/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/generics.py", line 85, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/python/Desktop/python_files/cmstest/cmstest/cmstest/apps/goods/views.py", line 106, in get_queryset
+    cat_id = self.request['category']
+TypeError: 'Request' object is not subscriptable
+INFO 2019-03-05 16:01:29,558 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+ERROR 2019-03-05 16:01:29,563 basehttp 124 "GET /goods/87/ HTTP/1.1" 500 18321
+WARNING 2019-03-05 16:01:29,671 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:01:29,672 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:04:59,348 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+INFO 2019-03-05 16:04:59,569 basehttp 124 "GET /goods/category/ HTTP/1.1" 200 77883
+WARNING 2019-03-05 16:04:59,596 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:04:59,596 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+WARNING 2019-03-05 16:05:04,173 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:05:04,174 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+ERROR 2019-03-05 16:05:04,279 exception 135 Internal Server Error: /goods/87/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/generics.py", line 85, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/python/Desktop/python_files/cmstest/cmstest/cmstest/apps/goods/views.py", line 106, in get_queryset
+    cat_id = self.request['category']
+TypeError: 'Request' object is not subscriptable
+ERROR 2019-03-05 16:05:04,355 basehttp 124 "GET /goods/87/ HTTP/1.1" 500 18288
+INFO 2019-03-05 16:05:04,368 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+INFO 2019-03-05 16:05:05,771 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+WARNING 2019-03-05 16:05:05,960 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:05:05,961 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:05:06,246 basehttp 124 "GET /goods/category/ HTTP/1.1" 200 77883
+INFO 2019-03-05 16:07:25,876 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+WARNING 2019-03-05 16:07:26,033 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:07:26,036 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:07:26,359 basehttp 124 "GET /goods/category/ HTTP/1.1" 200 77883
+ERROR 2019-03-05 16:07:39,292 exception 135 Internal Server Error: /goods/87/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'category'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/generics.py", line 85, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/python/Desktop/python_files/cmstest/cmstest/cmstest/apps/goods/views.py", line 106, in get_queryset
+    cat_id = self.request.query_params['category']
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'category'"
+INFO 2019-03-05 16:07:39,376 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+ERROR 2019-03-05 16:07:39,399 basehttp 124 "GET /goods/87/ HTTP/1.1" 500 18814
+WARNING 2019-03-05 16:07:39,681 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:07:39,691 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+WARNING 2019-03-05 16:09:27,783 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:09:27,786 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:09:28,141 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+INFO 2019-03-05 16:09:28,188 basehttp 124 "GET /goods/87/ HTTP/1.1" 200 2047
+INFO 2019-03-05 16:09:32,912 basehttp 124 "GET /category/40/ HTTP/1.1" 200 46
+INFO 2019-03-05 16:09:33,002 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+WARNING 2019-03-05 16:09:33,262 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:09:33,264 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:10:42,275 basehttp 124 "GET /category/40/ HTTP/1.1" 200 46
+INFO 2019-03-05 16:10:42,441 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+WARNING 2019-03-05 16:10:42,565 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:10:42,570 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:13:56,969 basehttp 124 "GET /category/40/ HTTP/1.1" 200 46
+INFO 2019-03-05 16:13:57,155 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+WARNING 2019-03-05 16:13:57,167 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:13:57,170 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:14:03,951 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+WARNING 2019-03-05 16:14:04,381 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:14:04,417 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:14:04,632 basehttp 124 "GET /goods/category/ HTTP/1.1" 200 77883
+ERROR 2019-03-05 16:14:08,792 exception 135 Internal Server Error: /goods/87/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/generics.py", line 85, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/python/Desktop/python_files/cmstest/cmstest/cmstest/apps/goods/views.py", line 108, in get_queryset
+    print('*'*30 + cat_id)
+TypeError: Can't convert 'NoneType' object to str implicitly
+INFO 2019-03-05 16:14:08,880 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+ERROR 2019-03-05 16:14:08,941 basehttp 124 "GET /goods/87/ HTTP/1.1" 500 18358
+WARNING 2019-03-05 16:14:09,171 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:14:09,171 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:18:59,728 basehttp 124 "GET /goods/87/ HTTP/1.1" 200 2047
+INFO 2019-03-05 16:18:59,748 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+WARNING 2019-03-05 16:18:59,763 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:18:59,776 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+WARNING 2019-03-05 16:19:03,237 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:19:03,238 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:19:03,589 basehttp 124 "GET /category/43/ HTTP/1.1" 200 74
+INFO 2019-03-05 16:19:03,697 basehttp 124 "GET /goods/?category=43&ordering=create_time HTTP/1.1" 200 8526
+INFO 2019-03-05 16:19:06,450 basehttp 124 "GET /goods/?category=43&ordering=sales HTTP/1.1" 200 8526
+INFO 2019-03-05 16:19:07,137 basehttp 124 "GET /goods/?category=43&ordering=sell_price HTTP/1.1" 200 8526
+INFO 2019-03-05 16:19:08,076 basehttp 124 "GET /goods/?category=43&ordering=-sell_price HTTP/1.1" 200 8526
+INFO 2019-03-05 16:19:09,096 basehttp 124 "GET /goods/?category=43&ordering=sell_price HTTP/1.1" 200 8526
+INFO 2019-03-05 16:19:11,231 basehttp 124 "GET /category/40/ HTTP/1.1" 200 46
+INFO 2019-03-05 16:19:11,352 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+WARNING 2019-03-05 16:19:11,506 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:19:11,510 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:19:21,836 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 16:19:22,759 basehttp 124 "GET /goods/?category=40&ordering=-sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 16:19:24,076 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 16:19:25,673 basehttp 124 "GET /goods/?category=40&ordering=-sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 16:19:26,398 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 16:19:27,499 basehttp 124 "GET /goods/?category=40&ordering=sales HTTP/1.1" 200 30905
+INFO 2019-03-05 16:19:28,285 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 16:19:29,018 basehttp 124 "GET /goods/?category=40&ordering=-sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 16:19:29,828 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 16:19:31,067 basehttp 124 "GET /goods/?category=40&ordering=sales HTTP/1.1" 200 30905
+INFO 2019-03-05 16:19:31,671 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+INFO 2019-03-05 16:19:57,343 basehttp 124 "GET /category/40/ HTTP/1.1" 200 46
+INFO 2019-03-05 16:19:57,524 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+WARNING 2019-03-05 16:19:57,577 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:19:57,579 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:19:59,034 basehttp 124 "GET /goods/?category=40&ordering=-sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 16:19:59,850 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 16:20:00,421 basehttp 124 "GET /goods/?category=40&ordering=sales HTTP/1.1" 200 30905
+INFO 2019-03-05 16:20:00,967 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+INFO 2019-03-05 16:20:17,591 basehttp 124 "GET /category/40/ HTTP/1.1" 200 46
+INFO 2019-03-05 16:20:17,673 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+WARNING 2019-03-05 16:20:17,765 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:20:17,767 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:20:19,298 basehttp 124 "GET /goods/?category=40&ordering=sales HTTP/1.1" 200 30905
+INFO 2019-03-05 16:20:20,005 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+INFO 2019-03-05 16:20:20,648 basehttp 124 "GET /goods/?category=40&ordering=sales HTTP/1.1" 200 30905
+INFO 2019-03-05 16:20:21,264 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 16:20:21,903 basehttp 124 "GET /goods/?category=40&ordering=-sell_price HTTP/1.1" 200 30905
+WARNING 2019-03-05 16:20:24,313 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:20:24,314 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+WARNING 2019-03-05 16:20:27,598 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:20:27,600 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:20:27,831 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+INFO 2019-03-05 16:20:28,372 basehttp 124 "GET /goods/category/ HTTP/1.1" 200 77883
+INFO 2019-03-05 16:20:32,975 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+INFO 2019-03-05 16:20:33,010 basehttp 124 "GET /goods/88/ HTTP/1.1" 200 4408
+WARNING 2019-03-05 16:20:33,268 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:20:33,278 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+WARNING 2019-03-05 16:20:35,651 base 152 Not Found: /news/top/
+WARNING 2019-03-05 16:20:35,664 basehttp 124 "GET /news/top/ HTTP/1.1" 404 5060
+WARNING 2019-03-05 16:20:35,676 base 152 Not Found: /news/category/
+WARNING 2019-03-05 16:20:35,677 basehttp 124 "GET /news/category/ HTTP/1.1" 404 5075
+WARNING 2019-03-05 16:20:36,036 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:20:36,037 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:20:39,808 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+WARNING 2019-03-05 16:20:40,145 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:20:40,146 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:20:40,438 basehttp 124 "GET /goods/category/ HTTP/1.1" 200 77883
+INFO 2019-03-05 16:20:43,144 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+INFO 2019-03-05 16:20:43,184 basehttp 124 "GET /goods/87/ HTTP/1.1" 200 2047
+WARNING 2019-03-05 16:20:43,394 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:20:43,396 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:20:46,522 basehttp 124 "GET /category/43/ HTTP/1.1" 200 74
+INFO 2019-03-05 16:20:46,639 basehttp 124 "GET /goods/?category=43&ordering=create_time HTTP/1.1" 200 8526
+WARNING 2019-03-05 16:20:46,681 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:20:46,682 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:20:48,787 basehttp 124 "GET /category/40/ HTTP/1.1" 200 46
+INFO 2019-03-05 16:20:48,947 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+WARNING 2019-03-05 16:20:49,149 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:20:49,150 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:22:14,768 basehttp 124 "GET /category/40/ HTTP/1.1" 200 46
+INFO 2019-03-05 16:22:14,954 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+WARNING 2019-03-05 16:22:15,036 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:22:15,037 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:22:27,413 basehttp 124 "GET /category/40/ HTTP/1.1" 200 46
+INFO 2019-03-05 16:22:27,427 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+WARNING 2019-03-05 16:22:27,585 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:22:27,591 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:22:30,492 basehttp 124 "GET /goods/?category=40&ordering=sales HTTP/1.1" 200 30905
+INFO 2019-03-05 16:22:30,973 basehttp 124 "GET /goods/?category=40&ordering=sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 16:22:31,581 basehttp 124 "GET /goods/?category=40&ordering=-sell_price HTTP/1.1" 200 30905
+INFO 2019-03-05 16:22:33,141 basehttp 124 "GET /category/40/ HTTP/1.1" 200 46
+INFO 2019-03-05 16:22:33,308 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+WARNING 2019-03-05 16:22:33,427 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:22:33,428 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:22:36,892 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+INFO 2019-03-05 16:22:36,893 basehttp 124 "GET /goods/87/ HTTP/1.1" 200 2047
+WARNING 2019-03-05 16:22:37,171 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:22:37,173 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:22:39,091 basehttp 124 "GET /category/43/ HTTP/1.1" 200 74
+INFO 2019-03-05 16:22:39,184 basehttp 124 "GET /goods/?category=43&ordering=create_time HTTP/1.1" 200 8526
+WARNING 2019-03-05 16:22:39,398 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:22:39,400 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:24:11,335 basehttp 124 "GET /category/43/ HTTP/1.1" 200 74
+INFO 2019-03-05 16:24:11,586 basehttp 124 "GET /goods/?category=43&ordering=create_time HTTP/1.1" 200 8576
+WARNING 2019-03-05 16:24:11,587 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:24:11,611 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:24:13,231 basehttp 124 "GET /goods/?category=43&ordering=sell_price HTTP/1.1" 200 8576
+INFO 2019-03-05 16:24:14,406 basehttp 124 "GET /goods/?category=43&ordering=-sell_price HTTP/1.1" 200 8576
+INFO 2019-03-05 16:24:15,210 basehttp 124 "GET /goods/?category=43&ordering=sell_price HTTP/1.1" 200 8576
+INFO 2019-03-05 16:24:15,805 basehttp 124 "GET /goods/?category=43&ordering=sales HTTP/1.1" 200 8576
+WARNING 2019-03-05 16:25:53,333 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:25:53,338 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:25:53,729 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+INFO 2019-03-05 16:25:54,098 basehttp 124 "GET /goods/category/ HTTP/1.1" 200 77883
+INFO 2019-03-05 16:25:56,518 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+INFO 2019-03-05 16:25:56,540 basehttp 124 "GET /goods/87/ HTTP/1.1" 200 2047
+WARNING 2019-03-05 16:25:56,763 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:25:56,764 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:26:00,781 basehttp 124 "GET /category/43/ HTTP/1.1" 200 74
+INFO 2019-03-05 16:26:00,911 basehttp 124 "GET /goods/?category=43&ordering=create_time HTTP/1.1" 200 8576
+WARNING 2019-03-05 16:26:00,979 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:26:00,981 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:27:49,496 basehttp 124 "GET / HTTP/1.1" 200 5185
+INFO 2019-03-05 16:27:49,577 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2019-03-05 16:27:49,578 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2019-03-05 16:27:49,591 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2019-03-05 16:27:49,592 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+INFO 2019-03-05 16:27:49,594 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2019-03-05 16:27:49,596 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2019-03-05 16:27:49,601 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2019-03-05 16:27:49,609 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2019-03-05 16:27:49,614 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2019-03-05 16:27:49,618 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2019-03-05 16:27:49,851 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+WARNING 2019-03-05 16:27:50,185 base 152 Not Found: /favicon.ico
+WARNING 2019-03-05 16:27:50,186 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 5066
+ERROR 2019-03-05 16:28:21,724 exception 135 Internal Server Error: /goods/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'category'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/python_files/cmstest/cmstest/cmstest/apps/goods/views.py", line 69, in list
+    cat_id = request.query_params['category']
+  File "/home/python/.virtualenvs/chen_cms_django/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'category'"
+ERROR 2019-03-05 16:28:21,835 basehttp 124 "GET /goods/ HTTP/1.1" 500 105367
+INFO 2019-03-05 16:28:35,071 basehttp 124 "GET /goods/?category=40 HTTP/1.1" 200 50782
+INFO 2019-03-05 16:28:35,148 basehttp 124 "GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+INFO 2019-03-05 16:30:24,012 basehttp 124 "GET /goods/?category=44 HTTP/1.1" 200 37256
+INFO 2019-03-05 16:30:28,072 basehttp 124 "GET /goods/?category=44 HTTP/1.1" 200 37256
+INFO 2019-03-05 16:31:08,858 basehttp 124 "GET /category/43/ HTTP/1.1" 200 74
+INFO 2019-03-05 16:31:08,982 basehttp 124 "GET /goods/?category=43&ordering=create_time HTTP/1.1" 200 8526
+WARNING 2019-03-05 16:31:09,126 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:31:09,129 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:31:12,056 basehttp 124 "GET /category/43/ HTTP/1.1" 200 74
+INFO 2019-03-05 16:31:12,112 basehttp 124 "GET /goods/?category=43&ordering=create_time HTTP/1.1" 200 8526
+WARNING 2019-03-05 16:31:12,222 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:31:12,223 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:31:14,241 basehttp 124 "GET /category/40/ HTTP/1.1" 200 46
+INFO 2019-03-05 16:31:14,321 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+WARNING 2019-03-05 16:31:14,410 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:31:14,412 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:31:17,108 basehttp 124 "GET /category/40/ HTTP/1.1" 200 46
+INFO 2019-03-05 16:31:17,209 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30905
+WARNING 2019-03-05 16:31:17,279 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:31:17,280 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:31:33,784 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+WARNING 2019-03-05 16:31:33,873 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:31:33,905 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:31:34,297 basehttp 124 "GET /goods/category/ HTTP/1.1" 200 77883
+INFO 2019-03-05 16:31:39,839 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+INFO 2019-03-05 16:31:39,902 basehttp 124 "GET /goods/87/ HTTP/1.1" 200 2047
+WARNING 2019-03-05 16:31:40,126 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:31:40,128 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:31:51,114 basehttp 124 "GET /category/43/ HTTP/1.1" 200 74
+INFO 2019-03-05 16:31:51,213 basehttp 124 "GET /goods/?category=43&ordering=create_time HTTP/1.1" 200 6574
+WARNING 2019-03-05 16:31:51,398 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:31:51,400 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:32:12,200 basehttp 124 "GET /goods/?category=43&ordering=create_time HTTP/1.1" 200 18369
+INFO 2019-03-05 16:33:41,903 basehttp 124 "GET /goods/?category=43&ordering=create_time HTTP/1.1" 200 20848
+INFO 2019-03-05 16:33:41,947 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2019-03-05 16:33:41,950 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2019-03-05 16:33:41,954 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2019-03-05 16:33:41,961 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2019-03-05 16:33:41,965 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+INFO 2019-03-05 16:33:41,969 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2019-03-05 16:33:41,980 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2019-03-05 16:33:41,985 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2019-03-05 16:33:41,990 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2019-03-05 16:33:41,995 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2019-03-05 16:33:42,036 basehttp 124 "GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+INFO 2019-03-05 16:37:39,449 basehttp 124 "GET /goods/87/ HTTP/1.1" 200 8464
+INFO 2019-03-05 16:39:44,765 basehttp 124 "GET /category/43/ HTTP/1.1" 200 74
+INFO 2019-03-05 16:39:44,816 basehttp 124 "GET /goods/?category=43&ordering=create_time HTTP/1.1" 200 8576
+WARNING 2019-03-05 16:39:44,983 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:39:44,985 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:39:45,812 basehttp 124 "GET /goods/?category=43&ordering=create_time HTTP/1.1" 200 20848
+INFO 2019-03-05 16:40:03,701 basehttp 124 "GET /category/43/ HTTP/1.1" 200 74
+INFO 2019-03-05 16:40:03,735 basehttp 124 "GET /goods/?category=43&ordering=create_time HTTP/1.1" 200 8576
+WARNING 2019-03-05 16:40:03,910 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:40:03,911 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:40:04,120 basehttp 124 "GET /goods/?category=43&ordering=create_time HTTP/1.1" 200 20848
+INFO 2019-03-05 16:40:04,179 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2019-03-05 16:40:04,180 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2019-03-05 16:40:04,182 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2019-03-05 16:40:04,185 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2019-03-05 16:40:04,197 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+INFO 2019-03-05 16:40:04,209 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2019-03-05 16:40:04,213 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2019-03-05 16:40:04,215 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2019-03-05 16:40:04,222 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2019-03-05 16:40:04,229 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2019-03-05 16:40:04,308 basehttp 124 "GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+INFO 2019-03-05 16:40:06,719 basehttp 124 "GET /category/43/ HTTP/1.1" 200 74
+INFO 2019-03-05 16:40:06,774 basehttp 124 "GET /goods/?category=43&ordering=create_time HTTP/1.1" 200 8576
+WARNING 2019-03-05 16:40:06,916 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:40:06,919 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:40:08,284 basehttp 124 "GET /goods/?category=43&ordering=sales HTTP/1.1" 200 8576
+INFO 2019-03-05 16:40:08,811 basehttp 124 "GET /goods/?category=43&ordering=sell_price HTTP/1.1" 200 8576
+INFO 2019-03-05 16:40:09,978 basehttp 124 "GET /goods/?category=43&ordering=-sell_price HTTP/1.1" 200 8576
+INFO 2019-03-05 16:40:13,700 basehttp 124 "GET /category/40/ HTTP/1.1" 200 46
+INFO 2019-03-05 16:40:13,833 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30955
+WARNING 2019-03-05 16:40:13,925 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:40:13,927 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:40:16,343 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+INFO 2019-03-05 16:40:16,388 basehttp 124 "GET /goods/87/ HTTP/1.1" 200 2047
+WARNING 2019-03-05 16:40:16,569 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:40:16,572 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:40:19,230 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+WARNING 2019-03-05 16:40:19,765 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:40:19,769 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:40:19,923 basehttp 124 "GET /goods/category/ HTTP/1.1" 200 77883
+INFO 2019-03-05 16:40:26,133 basehttp 124 "GET /goods/recommend/ HTTP/1.1" 200 1024
+INFO 2019-03-05 16:40:26,151 basehttp 124 "GET /goods/87/ HTTP/1.1" 200 2047
+WARNING 2019-03-05 16:40:26,336 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:40:26,355 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:40:32,397 basehttp 124 "GET /category/43/ HTTP/1.1" 200 74
+INFO 2019-03-05 16:40:32,482 basehttp 124 "GET /goods/?category=43&ordering=create_time HTTP/1.1" 200 8576
+WARNING 2019-03-05 16:40:32,642 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:40:32,643 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066
+INFO 2019-03-05 16:40:35,345 basehttp 124 "GET /category/40/ HTTP/1.1" 200 46
+INFO 2019-03-05 16:40:35,502 basehttp 124 "GET /goods/?category=40&ordering=create_time HTTP/1.1" 200 30955
+WARNING 2019-03-05 16:40:35,608 base 152 Not Found: /cart/count/
+WARNING 2019-03-05 16:40:35,610 basehttp 124 "GET /cart/count/ HTTP/1.1" 404 5066

@@ -1,9 +1,11 @@
 from rest_framework import status
+from rest_framework.filters import OrderingFilter
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.viewsets import ReadOnlyModelViewSet
 
+from cmstest.utils.paginations import MyPageNumberPagination
 from goods.models import Goods, GoodsCategory
 from goods.serializers import RecommendSerializer, CategorySerializer, GoodsSerializer, DetailCategorySerializer
 
@@ -58,11 +60,13 @@ class GoodsListViewSet(ReadOnlyModelViewSet):
     """商品列表"""
     queryset = Goods.objects.all()
     serializer_class = GoodsSerializer
+    pagination_class = MyPageNumberPagination
+    filter_backends = [OrderingFilter]
+    ordering_fields = ('create_time', 'sell_price', 'sales')
 
     def list(self, request, *args, **kwargs):
         # 获取查询参数
         cat_id = request.query_params['category']
-        order = request.query_params['ordering']
 
         # 查询数据库，获取该目录
         try:
@@ -81,15 +85,24 @@ class GoodsListViewSet(ReadOnlyModelViewSet):
                 ids.append(scat.id)
 
             # 查询商品数据库，将所属为该二级目录的商品选出来
-            goods = Goods.objects.filter(category_id__in=ids).order_by(order)
+            goods = Goods.objects.filter(category_id__in=ids)
+            goods = self.filter_queryset(goods)
+            page = self.paginate_queryset(goods)
+            if page is not None:
+                serializer = self.get_serializer(page, many=True)
+                return self.get_paginated_response(serializer.data)
             serializer = GoodsSerializer(goods, many=True)
 
             return Response(serializer.data)
 
         else:
             # 为二级目录，返回该目录下的所有商品
-            goods = Goods.objects.filter(category_id=cat_id).order_by(order)
-
+            goods = Goods.objects.filter(category_id=cat_id)
+            goods = self.filter_queryset(goods)
+            page = self.paginate_queryset(goods)
+            if page is not None:
+                serializer = self.get_serializer(page, many=True)
+                return self.get_paginated_response(serializer.data)
             serializer = self.get_serializer(goods, many=True)
 
             return Response(serializer.data)

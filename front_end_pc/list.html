@@ -63,7 +63,7 @@
             <ul class="img-list">
 
                 <!-- 循环显示多个商品信息 -->
-                <li v-for="(goods, index) in goods_list">
+                <li v-for="(goods, index) in goods_list.results">
                     <a :href="'goods_detail.html?id=' + goods.id">
                         <div class="img-box">
                             <img :src="goods.img_url"/>
